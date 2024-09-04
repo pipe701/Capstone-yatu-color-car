@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prototipo-Color-Car</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -25,8 +22,11 @@
                         <input type="text" id="carType" name="carType">
                     </div>
 
-                    <div>
-                        <input type="file" class='fancy-file' class="filter-group"  id="archivo" name="avatar" accept="image/*" data-button=""  multiple />
+                    <div class="filter-group">
+                        <input type="file" id="archivo" name="avatar" accept="image/*" class="fancy-file">
+                        <label for="archivo" class="file-label">
+                            Subir Archivo
+                        </label>
                     </div>
 
                     <div class="form-buttons">

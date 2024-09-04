@@ -5,18 +5,12 @@ Array.from(files).forEach(
         const label = create('label');
         const span_text = create('span');
         const span_name =create('span');
-        const span_button = create('span');
 
         label.htmlFor = f.id;
 
         span_text.className = 'fancy-file__fancy-file-name';
-        span_button.className = 'fancy-file__fancy-file-button';
+       
 
-        
-        span_button.innerHTML = f.dataset.button || 'Buscar';
-
-        label.appendChild(span_text);
-        label.appendChild(span_button);
         span_text.appendChild(span_name);
         f.parentNode.appendChild(label);
 

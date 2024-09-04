@@ -99,10 +99,12 @@ button:hover {
 
 /* Estilos para la página principal */
 header {
+    width: 100%;
     background-color: #ffffff;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 main {
@@ -127,6 +129,11 @@ select {
     border-radius: 5px;
 }
 
+header img {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
 #result {
     padding: 20px;
     background-color: #fff;
@@ -139,27 +146,28 @@ select {
 /* Filtros */
 .filters {
     background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 10px;
+    margin: 10px 0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .filter-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .filter-group label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .filter-group input {
     width: calc(100% - 20px);
-    padding: 8px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 14px;
 }
 
 /* Botones */
@@ -177,13 +185,30 @@ button[type="reset"] {
     background-color: #bdbdbd;
 }
 
+.form-buttons {
+    display: flex;
+    justify-content: space-between; /* Colocar los botones uno al lado del otro */
+}
+
+.form-buttons button {
+    flex: 1; /* Hacer que los botones ocupen el mismo espacio */
+    padding: 5px; /* Reducir el padding de los botones */
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    margin-right: 5px; /* Separar los botones ligeramente */
+}
+
+.form-buttons button:last-child {
+    margin-right: 0; /* Eliminar margen derecho del último botón */
+}
+
 /* Resultados */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 10px 0;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
 }
 
 table th, table td {
@@ -192,14 +217,42 @@ table th, table td {
     text-align: left;
 }
 
-table th {
+table th, table td {
     background-color: #f2f2f2;
     font-weight: bold;
+    padding: 5px;
 }
 
 .fancy-file{
     display: none;
 }
+
+.file-label {
+    display: inline-block;
+    padding: 10px;
+    background-color: #0400ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Ajuste el ancho según el contenido */
+    max-width: 100%; /* Asegura que el botón no se desborde */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+
+.fancy-file:focus + .file-label,
+.file-label:hover {
+    background-color: #0056b3; /* Cambiar color al hacer hover o focus */
+}
+
 .fancy-file + label{
     display: flex;
     flex: 1;
